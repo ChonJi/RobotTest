@@ -1,13 +1,12 @@
 *** Settings ***
-Library  PrintMethod
+Library  PrintMethod.py
 
 *** Test Cases ***
 Printing_Args_TC
-    Argumenty_Test  rysio=${0}  henio=${0}
-    print args  dupa=${nie kocham mamy} dupa2=${2}
+    Argumenty_Test  dupa='mama'  mama='tata'
 
 *** Keywords ***
 Argumenty_Test
-    [Arguments]  &{pierwszyslownik}  &{drugislownik}
+    [Arguments]  &{pierwszyslownik}  &{drugi}
     print_args  &{pierwszyslownik}
-    print_args  &{drugislownik}
+    print_args  &{drugi}
